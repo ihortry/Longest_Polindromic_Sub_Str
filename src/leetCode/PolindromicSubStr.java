@@ -9,8 +9,13 @@ public class PolindromicSubStr {
 		//System.out.println(simplePolindromic(str));
 		System.out.println(largestPolindromicSubStr(str));
 		
-	
+		System.out.println(largestStrWithNoRepetiotions(str));
 		  
+	}
+
+	private static char[] largestStrWithNoRepetiotions(String str) {
+		HashSet<Character>
+		return null;
 	}
 
 	private static String largestPolindromicSubStr(String str) {
@@ -21,7 +26,7 @@ public class PolindromicSubStr {
 		String maxStr = str.substring(0,maxLength);
 		
 		for(int i=0; i<str.length();i++) {
-			for(int j = i + maxLength; j < str.length(); j++) {
+			for(int j = i + maxLength; j <= str.length(); j++) {
 				if(j - i > maxLength && simplePolindromic(str.substring(i,j))) {
 					maxLength = j-i;
 					maxStr = str.substring(i,j);
